@@ -22,8 +22,9 @@ def get_child_pages(target):
     elementos = soup.css.select(query, limit=target['depth'])
 
     for elemento in elementos:
-        if utils.db.should_scrape(elemento['href']):
-            scrape_page(elemento['href'], target)
+        url = f"{target['uri']}{elemento['href']}"
+        if utils.db.should_scrape(url):
+            scrape_page(url, target)
 
 
 def scrape_page(url, target):
