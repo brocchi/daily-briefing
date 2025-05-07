@@ -1,0 +1,12 @@
+# Palavras-chave que devem estar presentes no conteúdo
+# Uma palavra por linha
+python
+programação
+desenvolvimento
+IAS
+ia
+AI
+inovação
+inteligência
+educação
+artificial

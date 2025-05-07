@@ -1,0 +1,73 @@
+{
+    "target": [
+        {
+            "active":true,
+            "label": "IGN",
+            "type": "pcl",
+            "url": "https://br.ign.com/tech/",
+            "parent_container": "div.tbl",
+            "child_anchor": "article div.t a",
+            "uri":"",
+            "depth": 10,
+            "page": {
+                "title": "h1#id_title",
+                "content": "div#id_text p"
+            }
+        },
+        {
+            "active":true,
+            "label": "AI News",
+            "type": "pcl",
+            "url": "https://ainews.net.br/c/news/",
+            "parent_container": "div.elementor-posts-container",
+            "child_anchor": "article a",
+            "uri":"",
+            "depth": 10,
+            "page": {
+                "title": "h1.elementor-heading-title",
+                "content": "div#text_content"
+            }
+        },
+        {
+            "active":true,
+            "label": "CNN",
+            "type": "pcl",
+            "url": "https://www.cnnbrasil.com.br/tudo-sobre/inteligencia-artificial/",
+            "parent_container": "ul.home__new",
+            "child_anchor": "li.home__list__item a.home__list__tag",
+            "uri":"",
+            "depth": 10,
+            "page": {
+                "title": "h1.single-header__title",
+                "content": "div.single-content p"
+            }
+        },
+        {
+            "active":true,
+            "label": "Olhar Digital",
+            "type": "pcl",
+            "url": "https://olhardigital.com.br/editorias/noticias/",
+            "parent_container": "div.p-list",
+            "child_anchor": "a.p-item",
+            "uri":"",
+            "depth": 10,
+            "page": {
+                "title": "h1",
+                "content": "article.sng-cnt"
+            }
+        },
+        {
+            "active":true,
+            "label": "Exame",
+            "type": "sal",
+            "url": "https://exame.com/noticias-sobre/inteligencia-artificial/",
+            "anchor_selector": "h3.headline-extra-small a",
+            "uri": "https://exame.com",
+            "depth": 10,
+            "page": {
+                "title": "div.news-content-container h1.headline-large",
+                "content": "p.body-extra-large"
+            }
+        }
+    ]
+}
