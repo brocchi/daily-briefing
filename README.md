@@ -10,6 +10,7 @@ Projeto 100% criado utilizando ferramentas de IA para estudo de produtividade. F
 - Manus - estrutura do projeto
 - Cursor - Refinamento do código, README, Docker
 - Github Copilot - Autocomplete e fixes
+- Qodo - Criação dos testes unitários
 
 ---
 
@@ -102,6 +103,34 @@ pip install -r requirements.txt
 Execute o projeto:
 ```bash
 python main.py
+```
+
+## 🧪 Testes
+
+O projeto inclui testes unitários que podem ser executados usando Docker ou localmente.
+
+### Usando Docker (Recomendado)
+
+Para executar todos os testes:
+```bash
+docker-compose run test
+```
+
+Para executar um teste específico:
+```bash
+docker-compose run test pytest tests/test_pcl.py::test_scrape_all_new_pages_with_keywords -v
+```
+
+Para ver mais detalhes durante a execução dos testes:
+```bash
+docker-compose run test pytest tests/ -v -s
+```
+
+### Execução Local dos Testes
+
+Com o ambiente virtual ativado, execute:
+```bash
+pytest tests/ -v
 ```
 
 ## 📝 Briefings

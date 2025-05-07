@@ -10,4 +10,13 @@ services:
       - "8000:8000"
     environment:
       - PYTHONPATH=/app
-    command: python main.py 
+    command: python main.py
+
+  test:
+    build: .
+    container_name: scrapper-test
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONPATH=/app
+    command: pytest tests/ -v 
