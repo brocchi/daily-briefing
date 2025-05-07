@@ -9,6 +9,7 @@ Faz o **scraping** e gera um arquivo final em **Markdown** — tudo automaticame
 Projeto 100% criado utilizando ferramentas de IA para estudo de produtividade. Ferramentas utilizadas até o momento:
 - Manus - estrutura do projeto
 - Cursor - Refinamento do código, README, Docker
+- Github Copilot - Autocomplete e fixes
 
 ---
 
