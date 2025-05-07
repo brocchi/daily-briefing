@@ -1,4 +1,5 @@
 import os
+import re
 
 
 def load_required_keywords():
@@ -19,6 +20,7 @@ def load_required_keywords():
 def check_content_has_keywords(content, required_words=None):
     """
     Verifica se o conteúdo contém pelo menos uma das palavras-chave requeridas.
+    A busca é feita por palavras completas, não partes de palavras.
     
     Args:
         content (str): O conteúdo a ser verificado
@@ -34,5 +36,7 @@ def check_content_has_keywords(content, required_words=None):
         return True, []
     
     content_lower = content.lower()
-    has_any_word = any(word.lower() in content_lower for word in required_words)
+    # Cria um padrão regex que busca palavras completas
+    pattern = r'\b(' + '|'.join(re.escape(word) for word in required_words) + r')\b'
+    has_any_word = bool(re.search(pattern, content_lower))
     return has_any_word, required_words 
