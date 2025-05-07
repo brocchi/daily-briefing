@@ -68,6 +68,34 @@
                 "title": "div.news-content-container h1.headline-large",
                 "content": "p.body-extra-large"
             }
+        },
+        {
+            "active":true,
+            "label": "startups.com.br",
+            "type": "pcl",
+            "url": "https://startups.com.br/ultimas-noticias/",
+            "parent_container": "div.archive-list-feed div",
+            "child_anchor": "article.feed  a.feed-link",
+            "uri":"",
+            "depth": 10,
+            "page": {
+                "title": "h1.single-head-title",
+                "content": "article div.single-content"
+            }
+        },
+        {
+            "active":true,
+            "label": "inovacaotecnologica",
+            "type": "pcl",
+            "url": "https://www.inovacaotecnologica.com.br/",
+            "parent_container": "div.conteudo div.manchete",
+            "child_anchor": "h2 a",
+            "uri":"https://www.inovacaotecnologica.com.br/",
+            "depth": 10,
+            "page": {
+                "title": "h1",
+                "content": "div#colCenN p"
+            }
         }
     ]
 }
