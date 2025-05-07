@@ -13,6 +13,7 @@ def get_child_pages(target):
     # Requisição HTTP
     response = requests.get(target['url'], timeout=10)
     response.raise_for_status()  # Garante que a resposta foi 200
+    response.encoding = response.apparent_encoding  # Detecta e define a codificação correta
 
     # Parsear o HTML
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -34,11 +35,12 @@ def scrape_page(url, target):
     # Requisição HTTP
     response = requests.get(url, timeout=10)
     response.raise_for_status()  # Garante que a resposta foi 200
+    response.encoding = response.apparent_encoding  # Detecta e define a codificação correta
 
     # Parsear o HTML
     soup = BeautifulSoup(response.text, 'html.parser')
-    title = soup.css.select_one(target['page']['title']).get_text()
-    content = soup.css.select_one(target['page']['content']).get_text()
+    title = soup.css.select_one(target['page']['title']).get_text(strip=True)
+    content = soup.css.select_one(target['page']['content']).get_text(strip=True)
     
     utils.db.save_scrapped(url)
     
