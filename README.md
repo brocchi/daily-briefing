@@ -37,11 +37,12 @@ Automatizar a coleta e organização de notícias importantes, ajudando você a 
 |-- configs/
 |    |-- themes.json
 |-- db/
+|-- briefings/           # Pasta com os briefings diários
+|    |-- YYYY-MM-DD-briefing.md
 |-- requirements.txt
 |-- Dockerfile
 |-- docker-compose.yml
 |-- README.md
-|-- conteudos.md
 ```
 
 ---
@@ -85,8 +86,8 @@ Crie e ative o ambiente virtual:
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate  # (Linux/macOS)
-.\venv\Scripts\activate    # (Windows)
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
 ```
 
 Instale as dependências:
@@ -99,8 +100,18 @@ Execute o projeto:
 python main.py
 ```
 
-Resultado:
-Um arquivo `conteudos.md` será gerado na raiz do projeto.
+## 📝 Briefings
+
+Os briefings são gerados automaticamente na pasta `briefings/` com o seguinte padrão de nome:
+- `YYYY-MM-DD-briefing.md` (exemplo: `2024-03-21-briefing.md`)
+
+Cada arquivo contém:
+- Data e hora de geração
+- Título da notícia
+- URL da fonte
+- Resumo do conteúdo
+
+Todos os briefings do mesmo dia são salvos no mesmo arquivo, facilitando a leitura e organização do conteúdo.
 
 ## 📦 Dependências
 - requests
