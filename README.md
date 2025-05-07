@@ -83,6 +83,18 @@ Para parar o container:
 docker-compose down
 ```
 
+### Containers Órfãos
+
+Durante o desenvolvimento, você pode encontrar avisos sobre "containers órfãos". Estes são containers que foram criados anteriormente mas não estão definidos no seu arquivo `docker-compose.yml`. Para limpar estes containers, você pode usar:
+
+```bash
+docker-compose up --remove-orphans
+```
+
+Este comando irá:
+1. Remover todos os containers órfãos
+2. Iniciar os serviços definidos no docker-compose.yml
+
 ### Execução Local (Sem Docker)
 
 Clone o repositório ou organize as pastas manualmente.
