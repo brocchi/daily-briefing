@@ -29,6 +29,9 @@ def get_child_pages(target):
 
 
 def scrape_page(url, target):
+    # Log do tipo de scrapper e URL
+    print(f"[INFO] Scrapper Type: Selector-Anchor-list | URL: {url}")
+
     # Requisição HTTP
     response = requests.get(url, timeout=10)
     response.raise_for_status()  # Garante que a resposta foi 200
@@ -43,7 +46,7 @@ def scrape_page(url, target):
     # Verifica se o conteúdo contém as palavras-chave
     has_keywords, required_words = utils.keywords.check_content_has_keywords(content)
     if not has_keywords:
-        print(f"Página ignorada - não contém todas as palavras requeridas: {required_words}")
+        print(f"Página ignorada - não contém todas as palavras requeridas")
         return
     
     summary = utils.db.summarize(content)
