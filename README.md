@@ -27,22 +27,25 @@ Automatizar a coleta e organização de notícias importantes, ajudando você a 
 
 ```
 /
-|-- main.py
-|-- scrapers/
-|    |-- __init__.py
-|    |-- scraper.py
-|-- utils/
-|    |-- __init__.py
-|    |-- formatter.py
-|-- configs/
-|    |-- themes.json
-|-- db/
-|-- briefings/           # Pasta com os briefings diários
+|-- main.py              # Arquivo principal do projeto
+|-- scrapers/            # Módulos de scraping para diferentes fontes
+|    |-- pcl.py         # Scraper para PCL
+|    |-- sal.py         # Scraper para SAL
+|-- utils/              # Utilitários e funções auxiliares
+|    |-- keywords.py    # Gerenciamento de palavras-chave
+|    |-- md.py          # Formatação de Markdown
+|    |-- db.py          # Operações com banco de dados
+|-- configs/            # Arquivos de configuração
+|    |-- urls.json      # URLs das fontes de notícias
+|    |-- keywords.txt   # Palavras-chave para filtragem
+|-- db/                 # Diretório para armazenamento do banco de dados
+|-- briefings/          # Pasta com os briefings diários
 |    |-- YYYY-MM-DD-briefing.md
-|-- requirements.txt
-|-- Dockerfile
-|-- docker-compose.yml
-|-- README.md
+|-- requirements.txt    # Dependências do projeto
+|-- Dockerfile         # Configuração do container Docker
+|-- docker-compose.yml # Configuração do ambiente Docker
+|-- README.md          # Documentação do projeto
+|-- .gitignore         # Arquivos ignorados pelo Git
 ```
 
 ---
