@@ -1,15 +1,15 @@
 # 🚀 Briefing Bot
 
 Um robô para gerar um **briefing diário** com base em **notícias relevantes**, diretamente a partir de uma lista de URLs pré-definidas.  
-Faz o **scraping** e gera um arquivo final em **Markdown** — tudo automaticamente.
+Realiza o **scraping** e gera um arquivo final em **Markdown** — tudo automaticamente.
 
--- 
+---
 
-## Disclamer
+## Disclaimer
 Projeto 100% criado utilizando ferramentas de IA para estudo de produtividade. Ferramentas utilizadas até o momento:
 - Manus - estrutura do projeto
 - Cursor - Refinamento do código, README, Docker
-- Github Copilot - Autocomplete e fixes
+- GitHub Copilot - Autocomplete e correções
 - Qodo - Criação dos testes unitários
 
 ---
@@ -44,10 +44,10 @@ Automatizar a coleta e organização de notícias importantes, ajudando você a 
 |-- briefings/          # Pasta com os briefings diários
 |    |-- YYYY-MM-DD-briefing.md
 |-- requirements.txt    # Dependências do projeto
-|-- Dockerfile         # Configuração do container Docker
-|-- docker-compose.yml # Configuração do ambiente Docker
-|-- README.md          # Documentação do projeto
-|-- .gitignore         # Arquivos ignorados pelo Git
+|-- Dockerfile          # Configuração do container Docker
+|-- docker-compose.yml  # Configuração do ambiente Docker
+|-- README.md           # Documentação do projeto
+|-- .gitignore          # Arquivos ignorados pelo Git
 ```
 
 ---
@@ -59,15 +59,15 @@ Automatizar a coleta e organização de notícias importantes, ajudando você a 
    Crie o arquivo `configs/urls.txt` com uma URL de notícia por linha, exemplo:
 
 ```
-    https://g1.globo.com/economia/noticia/2025/04/25/banco-central-eleva-juros.ghtml 
-    https://www.cnnbrasil.com.br/tecnologia/startup-brasileira-revoluciona-pagamentos/
+https://g1.globo.com/economia/noticia/2025/04/25/banco-central-eleva-juros.ghtml 
+https://www.cnnbrasil.com.br/tecnologia/startup-brasileira-revoluciona-pagamentos/
 ```
 
 ## 🛠️ Execução do Projeto
 
 ### Usando Docker (Recomendado)
 
-1. Certifique-se de ter o Docker e Docker Compose instalados
+1. Certifique-se de ter o Docker e o Docker Compose instalados.
 2. Execute o projeto:
 ```bash
 docker-compose up --build
@@ -85,15 +85,15 @@ docker-compose down
 
 ### Containers Órfãos
 
-Durante o desenvolvimento, você pode encontrar avisos sobre "containers órfãos". Estes são containers que foram criados anteriormente mas não estão definidos no seu arquivo `docker-compose.yml`. Para limpar estes containers, você pode usar:
+Durante o desenvolvimento, você pode encontrar avisos sobre "containers órfãos". Estes são containers que foram criados anteriormente, mas não estão definidos no seu arquivo `docker-compose.yml`. Para limpar estes containers, você pode usar:
 
 ```bash
 docker-compose up --remove-orphans
 ```
 
 Este comando irá:
-1. Remover todos os containers órfãos
-2. Iniciar os serviços definidos no docker-compose.yml
+1. Remover todos os containers órfãos.
+2. Iniciar os serviços definidos no `docker-compose.yml`.
 
 ### Execução Local (Sem Docker)
 
@@ -165,5 +165,5 @@ Todos os briefings do mesmo dia são salvos no mesmo arquivo, facilitando a leit
 ## 💬 Contribuição
 Sugestões, melhorias ou integrações são bem-vindas!
 
-Crie um fork, abra um PR ou só mande uma ideia.
+Crie um fork, abra um PR ou envie uma ideia.
 
