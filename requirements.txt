@@ -2,3 +2,4 @@ beautifulsoup4
 requests
 pytest
 pytest-mock
+pymongo==4.6.1

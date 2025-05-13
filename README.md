@@ -21,7 +21,7 @@ Automatizar a coleta e organização de notícias importantes, ajudando você a 
 **Resumo das entregas:**
 - Scraping seguro de notícias a partir de URLs
 - Geração de briefing em Markdown
-- Armazenamento em banco de dados
+- Armazenamento em MongoDB para controle de URLs já processadas
 
 ---
 
@@ -36,11 +36,10 @@ Automatizar a coleta e organização de notícias importantes, ajudando você a 
 |-- utils/              # Utilitários e funções auxiliares
 |    |-- keywords.py    # Gerenciamento de palavras-chave
 |    |-- md.py          # Formatação de Markdown
-|    |-- db.py          # Operações com banco de dados
+|    |-- db.py          # Operações com MongoDB
 |-- configs/            # Arquivos de configuração
 |    |-- urls.json      # URLs das fontes de notícias
 |    |-- keywords.txt   # Palavras-chave para filtragem
-|-- db/                 # Diretório para armazenamento do banco de dados
 |-- briefings/          # Pasta com os briefings diários
 |    |-- YYYY-MM-DD-briefing.md
 |-- requirements.txt    # Dependências do projeto
@@ -63,6 +62,18 @@ Automatizar a coleta e organização de notícias importantes, ajudando você a 
 https://g1.globo.com/economia/noticia/2025/04/25/banco-central-eleva-juros.ghtml 
 https://www.cnnbrasil.com.br/tecnologia/startup-brasileira-revoluciona-pagamentos/
 ```
+
+2. **MongoDB**
+
+   O projeto utiliza MongoDB para armazenar as URLs já processadas. As configurações padrão são:
+   - Host: mongodb
+   - Porta: 27017
+   - Usuário: admin
+   - Senha: admin123
+   - Database: scrapper_db
+   - Collection: scrapped_urls
+
+   Estas configurações podem ser ajustadas no arquivo `utils/db.py` se necessário.
 
 ## 🛠️ Execução do Projeto
 
@@ -162,6 +173,7 @@ Todos os briefings do mesmo dia são salvos no mesmo arquivo, facilitando a leit
 ## 📦 Dependências
 - requests
 - beautifulsoup4
+- pymongo
 
 ## 📄 Licença
 
