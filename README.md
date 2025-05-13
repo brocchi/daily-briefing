@@ -48,6 +48,7 @@ Automatizar a coleta e organização de notícias importantes, ajudando você a 
 |-- docker-compose.yml  # Configuração do ambiente Docker
 |-- README.md           # Documentação do projeto
 |-- .gitignore          # Arquivos ignorados pelo Git
+|-- LICENSE            # Licença GPLv3
 ```
 
 ---
@@ -161,6 +162,10 @@ Todos os briefings do mesmo dia são salvos no mesmo arquivo, facilitando a leit
 ## 📦 Dependências
 - requests
 - beautifulsoup4
+
+## 📄 Licença
+
+Este projeto está licenciado sob a GNU General Public License v3.0 - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## 💬 Contribuição
 Sugestões, melhorias ou integrações são bem-vindas!
